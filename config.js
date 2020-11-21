@@ -9,9 +9,9 @@ if(process.env.NODE_ENV == 'production'){
 }else{
 	configs = {
 		user: 'postgres',
+		password: '#0xWM10X', //fill-in
 		host: 'localhost',
-		database: '', //fill-in
-		password: '', //fill-in
+		database: 'fargotech', //fill-in
 		port: 5432,
 	}
 }

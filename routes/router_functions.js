@@ -10,5 +10,5 @@ function get_user_details(uid){
 }
 
 module.exports = {
-	'get_user_details': get_user_details
+	get_user_details,
 }

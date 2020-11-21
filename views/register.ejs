@@ -1,1 +1,63 @@
-<h1>Register</h1>
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form" action="/register" method="POST">
+				<span class="login100-form-title p-b-26" style="margin-bottom: 20px;">
+					Create Account
+				</span>
+
+				<% if (typeof(vals) != 'undefined'){ %>
+					<% vals.errors.forEach(function(err){ %>
+						<div class="alert alert-warning" role="alert">
+							<p class="msg"><%= err.msg %></p>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+					<% }) %>
+				<% } %>
+                
+                <div class="wrap-input100" >
+					<input class="input100" type="text" name="firstname"
+						value="<%= typeof(vals) != 'undefined' ? vals.firstname : '' %>">
+					<span class="focus-input100" data-placeholder="First Name"></span>
+                </div>
+                
+                <div class="wrap-input100" >
+					<input class="input100" type="text" name="lastname"
+						value="<%= typeof(vals) != 'undefined' ? vals.lastname : '' %>">
+					<span class="focus-input100" data-placeholder="Last Name"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<input class="input100" type="tel" name="phone" maxlength=10
+						value="<%= typeof(vals) != 'undefined' ? vals.phone : '' %>">
+					<span class="focus-input100" data-placeholder="Phone no."></span>
+				</div>
+
+				<div class="wrap-input100">
+					<input class="input100" type="password" name="pswd"
+						value="<%= typeof(vals) != 'undefined' ? vals.pswd : '' %>">
+					<span class="focus-input100" data-placeholder="Password"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<input class="input100" type="password" name="pswd2"
+						value="<%= typeof(vals) != 'undefined' ? vals.pswd2 : '' %>">
+					<span class="focus-input100" data-placeholder="Confirm Password"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<div class="wrap-login100-form-btn">
+						<button class="login100-form-btn" type="submit">Sign Up</button>
+					</div>
+				</div>
+
+				<div class="text-center" style="margin-top: 20px;">
+					<span class="txt1">Already have an account?</span>
+					<a class="txt2" href="/login">Login</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

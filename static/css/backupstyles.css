@@ -1,0 +1,162 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url("1.png");
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: right;  
+    margin: 20px 5vw 10px 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: Black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+button{
+    color:black;
+    border-radius: 10px;
+    border:none;
+    background-color: white;
+    padding: 7.5;
+}
+button:hover{
+    background-color: lime;
+}
+h1,h4{
+    text-align: center;
+    margin-left: 6vw;
+}
+h1{
+    font-size: 6rem;
+    color:white;
+    margin-bottom:5vh; 
+}
+h4{
+    font-size: 2rem;
+    color: white;
+}
+
+input{
+    outline: none;
+    border: none;
+}
+p{
+    background-color: white;
+    width: 10vw;
+    text-align: center;
+    border-radius: 20px;
+    margin:auto;
+    margin-top:10px;
+}
+.title{
+    min-height: 40vh;
+}
+.wrapper{
+    
+    min-height: 95vh;
+    margin: 0 5%;
+}
+
+.wrap-input100 {
+    
+    margin:auto;
+    width: 50%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+   
+    
+  }
+  .input100 {
+    margin-top: 5vh;
+    font-size: 15px;
+    color: white;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+  }
+  
+  .focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: #007944;    
+  }
+  
+  .focus-input100::after {
+    font-size: 15px;
+    color:white;;
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 50%;
+    position: relative;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
+  }
+  
+  .input100:focus + .focus-input100::after {
+    top: -15px;
+  }
+  
+  .input100:focus + .focus-input100::before {
+    width: 100%;
+  }
+  .know{
+      color:white;
+      text-align: center;
+      font-size: 2rem;
+      margin-top:15vh;
+  }
+  .col-4{
+      margin-top: 5vw;   
+  }
+  .col-3{
+      padding-left: 20px;;
+  }
+  .fa{
+      color:white;
+  }
+  .fa:hover{
+      color: grey;
+  }
+  .know-context{
+      margin-top:30vh;
+      padding:20px;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 10vh;
+  }
+  #pone{
+      margin-left: 10px;
+  }
+  #ptwo{
+      margin-left: 40px;
+  }
+  #pthree{
+      margin-left: 70px;
+  }

@@ -1,2 +1,6 @@
 <h1>Welcome!</h1>
 <h1>ID:<%= user.id %> | Name: <%= user.name %></h1>
+<p><%= user %></p>
+<form action="/user/<%= user.id %>/logout" method="POST">
+	<button type="submit">Logout</button>
+</form>
