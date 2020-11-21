@@ -1,0 +1,23 @@
+{
+	"name": "fargotech",
+	"version": "1.0.0",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node main.js",
+		"build": "grunt build",
+		"start": "npm run build && env NODE_ENV=production node main.js"
+	},
+	"author": "Strix",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "*",
+		"express": "*",
+		"grunt": "*",
+		"grunt-newer": "*",
+		"grunt-contrib-htmlmin": "*",
+		"grunt-autoprefixer": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
+		"pg": "*"
+	}
+}
