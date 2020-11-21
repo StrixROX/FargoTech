@@ -1,7 +1,14 @@
-const { pool } = require('../config');
+//const { pool } = require('../config'); //later
 
-//the router functions go here
+function get_user_details(uid){
+	details = {
+		id: uid,
+		name: 'myName',
+	}
+
+	return details
+}
 
 module.exports = {
-	//all exports go here
+	'get_user_details': get_user_details
 }

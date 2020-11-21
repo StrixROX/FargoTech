@@ -3,21 +3,29 @@
 	"version": "1.0.0",
 	"main": "main.js",
 	"scripts": {
-		"dev": "node main.js",
+		"dev": "nodemon main.js",
 		"build": "grunt build",
 		"start": "npm run build && env NODE_ENV=production node main.js"
 	},
 	"author": "Strix",
 	"license": "ISC",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
 		"body-parser": "*",
+		"ejs": "^3.1.5",
 		"express": "*",
+		"express-ejs-layouts": "^2.5.0",
 		"grunt": "*",
-		"grunt-newer": "*",
-		"grunt-contrib-htmlmin": "*",
 		"grunt-autoprefixer": "*",
 		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-htmlmin": "*",
 		"grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
+		"grunt-newer": "*",
+		"passport": "^0.4.1",
+		"passport-local": "^1.0.0",
 		"pg": "*"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.6"
 	}
 }
