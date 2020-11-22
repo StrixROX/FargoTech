@@ -13,6 +13,7 @@
 }
 
 .navbar > * {
+	position: static;
 	margin: 0 10px;
 	color: inherit;
 }

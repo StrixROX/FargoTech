@@ -1,0 +1,42 @@
+<div class="limiter">
+	<div class="container-login100">
+		<div class="wrap-login100">
+			<form class="login100-form validate-form">
+				<span class="login100-form-title p-b-26" style="margin-bottom: 20px;">
+					Update
+				</span>
+                
+                <div class="wrap-input100 " style="border: 0; padding-top: 10px;font-size:1.3rem; text-align:center;">
+					Upload your crop image: <label for="myfile"><i class="fa fa-upload fa-2x" style="padding: 0 15px; "></i></label><input type="file" id="myfile" name= "myfile" multiple style="display: none;">
+                </div>
+                
+                <div class="wrap-input100" >
+					<input class="input100" type="text" name="cropname">
+					<span class="focus-input100" data-placeholder="Crop Name"></span>
+				</div>
+				<div class="wrap-input100" >
+					<input class="input100" type="text" name="yourname">
+					<span class="focus-input100" data-placeholder="Your name"></span>
+				</div>
+				<div class="wrap-input100" data-validate="Enter password">
+					
+					<input class="input100" type="text" name="yourdistrict">
+					<span class="focus-input100" data-placeholder="Your district"></span>
+				</div>
+				<div class="container-login100-form-btn">
+					<div class="wrap-login100-form-btn">
+						<button class="login100-form-btn" onclick="update()">
+							Update
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script>
+    function update(){
+        alert("Updated!");
+    }
+</script>

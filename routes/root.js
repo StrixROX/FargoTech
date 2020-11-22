@@ -8,6 +8,7 @@ router.get('/', (req, res) => res.render('index', {title: 'FargoTech', type: 'pa
 router.get('/login', (req, res) => res.render('login', {title: 'Login - FargoTech', type: 'form', styles: ['forms']}));
 router.get('/register', (req, res) => res.render('register', {title: 'Register - FargoTech', type: 'form', styles: ['forms']}));
 router.get('/farmers-friend', (req, res) => res.render('farmers_friend', {title: 'Farmer\'s Friend - FargoTech', type: 'page', styles: ['farmers_friend']}));
+router.get('/search', (req, res) => res.render('search_results', {title: 'Showing Search Results - FargoTech', type: 'page', styles: ['search']}));
 
 router.post('/login', body_parser.urlencoded({extended: false}), (req, res) => {
 	const {phone, pswd} = req.body;

@@ -14,6 +14,8 @@ router.get('/', (req, res) => {
 	}
 });
 
+router.get('/update_harvest', (req, res) => res.render('update_harvest', {title: 'Update Harvset - FargoTech', type: 'form', styles: ['forms', 'update_harvest']}))
+
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
 

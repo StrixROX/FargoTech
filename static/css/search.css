@@ -1,0 +1,63 @@
+body{
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("pexels.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.row button{
+    border: 0;
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 60%;
+    
+}
+.row button:hover{
+    background-color: green;
+    
+}
+p{
+    margin: 5%;
+    font-size:3rem;
+    text-align: center;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+hr{
+    border: 1px solid white;
+    width:80%;
+    margin-top: 0;
+}
+.margin{
+    margin: 20px 0;
+}
+.col-10{
+    margin: auto;
+    background-color: transparent;
+    height: 100vh;
+}
+.col-3{
+    min-height: 40vh;
+    background-color: white;
+    margin:30px auto;
+    border-radius: 10px;
+    padding: 10x;
+    box-shadow: 0 0 20px rgb(20, 20, 20)
+}
+.r1{
+    text-align: center;
+    margin:auto;
+    padding-top: 20px;;
+}
+.r1 p{
+    
+    margin: 10px 0px;
+    color: black;
+    font-size: 1.1rem;
+}
