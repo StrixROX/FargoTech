@@ -4,7 +4,15 @@ const router = express.Router();
 const rf = require('./router_functions');
 const { pool } = require('../config');
 
-router.get('/', (req, res) => res.redirect('/login'));
+let login_details = {loggedin: false, details: null};
+
+router.get('/', (req, res) => {
+	if(!login_details.loggedin){
+		res.redirect('/login');
+	}else{
+		res.redirect('/user/' + login_details.details.id);
+	}
+});
 
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
@@ -31,7 +39,13 @@ router.get('/:id', (req, res) => {
 	})
 	.then(({loggedin, details}) => {
 		if (loggedin){
-			res.render('user_home', {title: details.name + ' - FargoTech', type: 'page', user: details});
+			res.render('user_home', {
+				title: details.name + ' - FargoTech',
+				type: 'page',
+				styles: ['user_page'],
+				user: details
+			});
+			login_details = {loggedin, details};
 		}else{
 			res.redirect('/login');
 		}
@@ -45,9 +59,12 @@ router.get('/:id/edit', (req, res) => {
 	res.render('edit_profile', {title: 'Edit Profile - FargoTech', type: 'page', user: details})
 });
 
-router.post('/:id/logout', (req, res) => {
-	pool.query("UPDATE user_creds SET loggedin='f' WHERE id='" + req.params.id + "';")
-	.then(() => res.redirect('/login'));
+router.post('/logout', (req, res) => {
+	pool.query("UPDATE user_creds SET loggedin='f' WHERE id='" + login_details.details.id + "';")
+	.then(() => {
+		res.redirect('/login');
+		login_details = {loggedin: false, details: null};
+	});
 });
 
 module.exports = router;

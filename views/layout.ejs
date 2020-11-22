@@ -24,21 +24,33 @@
 		crossorigin="anonymous">
 	</script>
 
-	<% if (type == 'form'){ %>
-		<link rel="stylesheet" type="text/css" href="/static/css/forms.css">
+	<% if (typeof(no_nav) === 'undefined'){ %>
+		<link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
 	<% }%>
+	<% styles.forEach(function(style){ %>
+		<link rel="stylesheet" type="text/css" href="/static/css/<%= style %>.css">
+	<% })%>
 </head>
 <body>
-	<% if (type == 'page'){ %>
-		//navbar
+	<% if (type == 'page' && typeof(no_nav) === 'undefined'){ %>
+		<nav class="navbar">
+			<a href="/" class="fargo-link">FargoTech</a>
+			<form action="/search" method="GET" class="search">
+				<input type="text" name="query" placeholder="Search...">
+				<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+			<div class="messages">
+				<span>Messages<sup style="color: red"><i class="fa fa-circle" aria-hidden="true"></i></sup></span>
+				<div class="message-container" style="display: none;">
+					<div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo earumdebitis nisi laboriosam sequi aperiam fugit dolore fugiat voluptatem culpa.</div>
+					<div class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quiabeatae ab.</div>
+					<div class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quassint rem.</div>
+				</div>
+			</div>
+			<a href="/user/logout">Logout</a>
+		</nav>
 	<% }%>
 	
-	<div class="container">
-		<%- body %>
-	</div>
-
-	<% if (type == 'page'){ %>
-		//footer
-	<% }%>
+	<%- body %>
 </body>
 </html>

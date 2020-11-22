@@ -1,6 +1,88 @@
-<h1>Welcome!</h1>
-<h1>ID:<%= user.id %> | Name: <%= user.name %></h1>
-<p><%= user %></p>
-<form action="/user/<%= user.id %>/logout" method="POST">
-	<button type="submit">Logout</button>
-</form>
+<header>
+	<div class="header-text">
+		<div class="row">
+			<div class="col-3">
+			  <img src="/static/assets/avatar.png" width="200px" height="200px" class="image">
+			</div>
+			<div class="col-3" id="profilehead">
+				<p style="font-size: 2rem; margin-bottom:2px">Ram Shankar</p>
+				<p style="font-size: 1.2rem;"><i class="fa fa-map-marker"> Firozepur, Punjab</i></p>
+				<p style="font-size: 1.2rem;">Phone No: 1234567890</p>
+			</div>
+			<div class="col-3" id="profilehead">
+				<button>Edit Profile</button>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="sep"></div>
+<div class="row" style="margin-top: 8vh; padding: 0 5%">
+	<div class="col-3">
+		<div>
+			<p style="font-size: 1.5rem; padding: 0 10px; margin: 0;"><b>Crops growing: 2</b></p>
+			<a href="#" style="margin-left: 15px"><span>See all</span></a>
+			<a href="#" style="margin-left: 15px"><span>Update</span></a>
+		</div>
+		<div>
+			<p style="font-size: 1.5rem; padding: 0 10px; margin: 0;"><b>Crops Harvested:   15</b></p>
+			<a href="#" style="margin-left: 15px"><span>See all</span></a>
+			<a href="#" style="margin-left: 15px"><span>Update</span></a>
+		</div>
+
+		<div class="ff">
+			<a href="/farmers-friend">
+				<i class="fa fa-microphone fa-5x" onclick="listen()" class="icon" style="line-height: 1.6;"></i>
+			</a>
+			<br>
+			<p><b>Farmer's Friend</b><br><i>Click to Get Assistance</i></p>
+		</div>
+	</div>
+	<div class="col-5">
+	   
+		<div style="text-align: left;"> 
+			<p class="bold" style="padding-top: 15px;">Purchase Offers:</p>
+			<div class="row">
+				<div class="col-6" >
+					<p>Vijay</p>
+					<p>Ayush</p>
+					<p>Satpal</p>
+					<p>Shankar</p>
+				</div>
+				<div class="col-6" >
+					<p>Wheat</p>
+					<p>Maize</p>
+					<p>Corn</p>
+					<p>Wheat</p>
+				</div>
+			</div>
+			<p class="bold">Accepted Offers:</p>
+			<div class="row">
+				<div class="col-6">
+					<p>Vijay</p>
+					<p>Ayush</p>
+					<p>Satpal</p>
+					<p>Shankar</p>
+				</div>
+				<div class="col-6">
+					<p>Wheat</p>
+					<p>Maize</p>
+					<p>Corn</p>
+					<p>Wheat</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-4">
+		<div class="weather">
+			<p>Weather</p>
+		<img src="weather.png" height="200px" width="100%">
+		</div>
+		<div class="notice">
+			<p>Notice:</p>
+			<p id="cyclone">Cyclone Warning!
+				<span>26th Nov 2020</span>
+				<p class="notice-content">Coastal states near the Bay of Bengal possess risk of being affected by an anticipated cyclone on 26th Nov 2020.</p>
+			</p>
+		</div>
+	</div>
+</div>

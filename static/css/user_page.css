@@ -1,26 +1,33 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
+
 .image{
     border-radius:50%;
     margin:auto;
     position: relative;
-    left: 30px;
+    left: 25%;
     top: 30px;
 }
 
+.sep{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(200,200,200,0.7);
+}
+
 header{
-    background-image:url("1.png");
+    background-image:url("/static/assets/cornfield.jpg");
+    background-size: cover;
+    background-position: 25% 50%;
     margin:0;
-    
+    color: white;
 }
 header p{
-    font-weight: bold;
-    
-}
-hr{
-    margin-top:0;
-    border: 1px solid black;
+    color: white;
 }
 input{
     outline: none;
@@ -31,13 +38,14 @@ span{
 }
 button{
     color:black;
-    border-radius: 10px;
-    border:none;
+    border-radius: 6px;
+    border: 1px solid rgba(200,200,200,0.7);
     background-color:white;
-    padding: 7.5px;
+    padding: 5px 15px;
 }
 button:hover{
     background-color: lime;
+    border-color: transparent;
 }
 header span{
     color: black;
@@ -179,4 +187,17 @@ header span:hover{
     font-size: 1rem;
     float: right;
     padding-top:10px;
+}
+
+.ff{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.ff:hover .icon{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
 }

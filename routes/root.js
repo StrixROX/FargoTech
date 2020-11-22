@@ -4,9 +4,10 @@ const body_parser = require('body-parser');
 
 const { pool } = require('../config');
 
-router.get('/', (req, res) => res.render('index', {title: 'FargoTech', type: 'page'}));
-router.get('/login', (req, res) => res.render('login', {title: 'Login - FargoTech', type: 'form'}));
-router.get('/register', (req, res) => res.render('register', {title: 'Register - FargoTech', type: 'form'}));
+router.get('/', (req, res) => res.render('index', {title: 'FargoTech', type: 'page', styles: ['index'], no_nav: true}));
+router.get('/login', (req, res) => res.render('login', {title: 'Login - FargoTech', type: 'form', styles: ['forms']}));
+router.get('/register', (req, res) => res.render('register', {title: 'Register - FargoTech', type: 'form', styles: ['forms']}));
+router.get('/farmers-friend', (req, res) => res.render('farmers_friend', {title: 'Farmer\'s Friend - FargoTech', type: 'page', styles: ['farmers_friend']}));
 
 router.post('/login', body_parser.urlencoded({extended: false}), (req, res) => {
 	const {phone, pswd} = req.body;
@@ -42,6 +43,7 @@ router.post('/login', body_parser.urlencoded({extended: false}), (req, res) => {
 			res.render('login', {
 				title: 'Login - FargoTech',
 				type: 'form',
+				styles: ['forms'],
 				vals: {
 					errors,
 					phone,
@@ -64,6 +66,7 @@ router.post('/login', body_parser.urlencoded({extended: false}), (req, res) => {
 					res.render('login', {
 						title: 'Login - FargoTech',
 						type: 'form',
+						styles: ['forms'],
 						vals: {
 							errors,
 							phone,
@@ -113,6 +116,7 @@ router.post('/register', body_parser.urlencoded({extended: false}), (req, res) =
 			res.render('register', {
 				title: 'Register - FargoTech',
 				type: 'form',
+				styles: ['forms'],
 				vals: {
 					errors,
 					firstname,
@@ -151,6 +155,7 @@ router.post('/register', body_parser.urlencoded({extended: false}), (req, res) =
 					res.render('register', {
 						title: 'Register - FargoTech',
 						type: 'form',
+						styles: ['forms'],
 						vals: {
 							errors,
 							firstname,

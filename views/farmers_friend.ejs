@@ -1,0 +1,29 @@
+<div class="ff">
+	<div class="row padding">
+		<div class="col-7" id="intro">
+			Hi! I am farmer's friend, available to answer any of your queries or doubts. Feel free to ask me anything about farming, weather or maybe even some farming related science.
+			<b>Just click the mic and speak your trouble</b>, I'll try my best to come up with a worthy answer.
+		</div>
+		<div class="col-4" id="logo">
+			<i class="fa fa-microphone fa-5x" onclick="listen()"></i>
+		</div>
+		</div>
+		<div class="row">
+			<div class="wrap-input100 col-lg-6" >
+				<input class="input100" type="text" name="firstname">
+				<span class="focus-input100" data-placeholder="Or Type"></span>
+			</div>
+	</div>
+</div>
+<div class="reply">
+
+</div>
+<script>
+	function listen(){
+		$(".ff .fa").addClass("animation");
+		setTimeout(function(){
+			$(".ff .fa").removeClass("animation");
+		$(".reply").text("The weather today is rainy, cyclone alert in coastal areas of Bay of Bengal")
+			$(".reply").addClass("inset");},5000);
+	}
+</script>
